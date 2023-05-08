@@ -1,0 +1,94 @@
+* {
+  padding: 0;
+  margin: auto;
+  box-sizing: border-box;
+}
+
+@keyframes glow {
+  from {
+    background-position: 0%;
+  }
+  to {
+    background-position: 300%;
+  }
+}
+.image-link {
+  margin: auto;
+  display: flex;
+}
+#image {
+  color: #b4886b;
+  font-weight: bold;
+  display: block;
+  font-size: 1.5rem;
+  border-radius: 1.2rem;
+}
+.label {
+  padding: 2rem;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: brown;
+}
+
+button {
+  /* color: red; */
+  border-radius: 0.5rem;
+  font-size: 1.4rem;
+  cursor: pointer;
+  position: relative;
+  outline: none;
+  text-decoration: none;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  text-transform: uppercase;
+  height: 45px;
+  width: 130px;
+  opacity: 1;
+  background-color: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.6);
+}
+button:hover {
+  animation: glow 2s linear ease-in-out;
+}
+.images {
+  width: 100%;
+  /* background: bisque; */
+}
+.image-holder {
+  width: 70%;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 1rem;
+  background-color: white;
+
+  padding: 1rem;
+  border-radius: 1rem;
+  margin: auto;
+}
+
+.image-holder #output {
+  width: 300px;
+  height: 450px;
+  border-radius: 1rem;
+  transition: ease-in 3s;
+  transform: translateX(0);
+  padding: 1rem;
+}
+.image-holder #output:hover {
+  height: 450px;
+  border-radius: 1rem;
+
+  z-index: 1;
+  border-color: transparent;
+  background: linear-gradient(90deg, rgb(206, 182, 206), indigo, pink);
+  color: black;
+  background-size: 400%;
+  transform: scale(1.1);
+  box-shadow: 0 0 15px white;
+  animation: glow 2s linear ease;
+  margin: 1rem;
+}
